@@ -46,10 +46,94 @@ header {
     grid-column: 2 / 6;
     grid-row: 1 / 2;
     background-color: white;
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    box-shadow: 0px 2px 4px gray;
+    z-index: 1;
 }
 
 .main-content {
     background-color: lightgray;
     grid-column: 2 / 6;
     grid-row: 2 / 6;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+    gap: 16px;
+}
+
+.search-icon {
+}
+
+.search input {
+    border: none;
+    background-color: lightgrey;
+    border-radius: 16px;
+    flex: 1;
+    min-width: 200px;
+    padding: 8px 16px;
+    outline: none;
+}
+
+.search input:focus {
+    background-color: lightblue;
+}
+
+.search-menu {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+    justify-content: center;
+    gap: 16px;
+}
+
+.user-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+}
+
+.user-status {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.user-info .user-name {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.feed-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.feed-buttons {
+    color: white;
+    background-color: lightseagreen;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.feed-buttons:hover {
+    background-color: lightblue;
 }
