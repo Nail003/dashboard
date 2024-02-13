@@ -167,7 +167,22 @@ header {
 }
 
 .main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     background-color: lightgray;
     grid-column: 2 / 6;
     grid-row: 2 / 6;
+    padding: 16px 16px;
+}
+
+.project-container {
+    display: grid;
+}
+
+.project-card {
+    width: 320px;
+    height: 186px;
+    background-color: white;
+    border-radius: 8px;
+    border-left: 8px solid lightsalmon;
 }
