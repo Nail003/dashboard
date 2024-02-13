@@ -7,6 +7,19 @@
         sans-serif;
 }
 
+.center-y {
+    display: flex;
+    align-items: center;
+}
+
+.no-weight {
+    font-weight: normal;
+}
+
+.full-height {
+    height: 100%;
+}
+
 main {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) repeat(4, 1fr);
@@ -22,6 +35,11 @@ main {
     padding: 16px 0px;
 }
 
+.logo-container {
+    display: grid;
+    grid-template-columns: minmax(48px, 20%) 1fr;
+}
+
 .side-menu {
     padding: 24px 0px;
 }
@@ -31,8 +49,10 @@ main {
 }
 
 .side-menu a {
-    padding: 4px 16px;
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(24px, 10%) 1fr;
+    gap: 24px;
+    padding: 4px 32px;
     font-size: 1rem;
     color: white;
     text-decoration: none;
@@ -54,25 +74,16 @@ header {
     z-index: 1;
 }
 
-.main-content {
-    background-color: lightgray;
-    grid-column: 2 / 6;
-    grid-row: 2 / 6;
-}
-
 .search-container {
     display: flex;
     flex-direction: row;
 }
 
 .search {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 24px 1fr;
     flex: 5;
     gap: 16px;
-}
-
-.search-icon {
 }
 
 .search input {
@@ -90,11 +101,20 @@ header {
 }
 
 .search-menu {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 24px;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
     flex: 3;
     justify-content: center;
-    gap: 16px;
+    gap: 32px;
+}
+
+.profile-pic {
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
 }
 
 .user-info-container {
@@ -105,17 +125,24 @@ header {
 
 .user-info {
     display: grid;
-    grid-template-columns: 128px 1fr;
+    grid-template-columns: 96px 1fr;
+}
+
+.user-info .profile-pic {
+    width: 80px;
+    height: 80px;
+    grid-column: 1/2;
+    grid-row: 1/5;
 }
 
 .user-status {
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: 2/3;
 }
 
 .user-info .user-name {
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 3/4;
 }
 
 .feed-button-container {
@@ -129,11 +156,18 @@ header {
     color: white;
     background-color: lightseagreen;
     border: none;
-    padding: 8px 24px;
+    font-size: 1rem;
+    padding: 8px 32px;
     border-radius: 16px;
     cursor: pointer;
 }
 
 .feed-buttons:hover {
     background-color: lightblue;
+}
+
+.main-content {
+    background-color: lightgray;
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
 }
